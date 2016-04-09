@@ -3,12 +3,14 @@ function getNewURL(url) {
     var matches = [
         new RegExp("\/Stream\\(0[1-5^" + layerId + "]\\)\/","g"),
         new RegExp("_Layer[1-5^" + layerId + "]_vod\.m3u8","g"),
-        new RegExp("\/Layer[1-5^" + layerId + "]\/","g")
+        new RegExp("\/Layer[1-5^" + layerId + "]\/","g"),
+        new RegExp("\/stream[1-5^" + layerId + "]\/","g"),
     ];
     var replaces = [
         "/Stream(0" + layerId + ")/",
         "_Layer" + layerId + "_vod.m3u8",
-        "/Layer" + layerId + "/"
+        "/Layer" + layerId + "/",
+        "/stream" + layerId + "/"
     ];
     for (index = 0; index < matches.length; ++index) { 
         if (replaces[index] != null && url.match(matches[index])) {
@@ -23,7 +25,8 @@ chrome.webRequest.onBeforeRequest.addListener(function (details) {
     };
 }, {
     urls: [
-        "*://*/session/*"
+        "*://*/session/*",
+        "*://nowtv100-i.akamaihd.net/hls/live/*"
     ],
     tabId: -1
 }, ["blocking"]);
