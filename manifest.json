@@ -1,15 +1,12 @@
 {
     "name": "ForceHD for Viu.TV",
-    "description": "no more \"please play via wifi connection\" message",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "manifest_version": 2,
     "background": {
         "scripts": ["background.js"]
     },
     "permissions":[
         "<all_urls>",
-        "activeTab",
-        "tabs",
         "webRequest",
         "webRequestBlocking"
     ]
