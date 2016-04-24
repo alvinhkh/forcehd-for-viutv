@@ -23,7 +23,8 @@ function getNewUrl(url) {
 var requestFilter = {
   urls: [
     "*://*/session/*",
-    "*://nowtv100-i.akamaihd.net/hls/live/*"
+    "*://nowtv100-i.akamaihd.net/hls/live/*",
+    "*://*.viu.com/s/*"
   ]
 };
 

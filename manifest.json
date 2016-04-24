@@ -1,6 +1,6 @@
 {
     "name": "ForceHD for Viu.TV",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "manifest_version": 2,
     "background": {
         "scripts": ["background.js"]
